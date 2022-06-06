@@ -1,1 +1,1 @@
-https://EskovDMTA.github.io/rsschool-cv/cv
+https://EskovDMTA.github.io/rsschool-cv/

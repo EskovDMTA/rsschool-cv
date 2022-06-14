@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Eskov Dmitry CV</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#about_me" class="nav-link" >About me</a></li>
+                    <li class="nav-item"><a href="#contacts" class="nav-link" >Contacts</a></li>
+                    <li class="nav-item"><a href="#hard_skills" class="nav-link">Hard skills</a></li>
+                    <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                    <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                    <li class="nav-item"><a href="#code_example" class="nav-link">Code example</a></li>
+                    <li class="nav-item"><a href="#english" class="nav-link">English</a></li>  
+                </ul>
+            </nav>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container main-container">
+        <section class="section section-profile" id='about-me'>
+            <img src="assets/img/photo.jpg" class="section-profile-logo" width="200" alt="photo">
+            <div class="section-profile-title">
+            <h1 class="section-title main-title">Eskov Dmitry</h1>
+            <h3 class="section-subtitle">beginner back-end developer</h3>
+        </div>
+        </section>
+
+        <section class="section" id='about_me'>
+            <h2 class="section-title">About me</h2>
+                <p>Hello. My main activity is not related to programming in any way, I design ventilated facades and work in the construction industry.
+                    I came across programming when I wanted to automate my routine tasks at work.
+                    I liked this area, and now I spend all my free time learning to program.
+                    I became interested in the direction of web development. Now I am studying backend, I saw rs.school courses on the Internet and decided to get knowledge on frontend. This area is very interesting for me and in the future I would like to do just that and become a fullstack developer.
+                </p>
+        </section>
+
+        <section class="section" id='contacts'>
+            <h2 class="section-title">Contacts</h2>
+                <ul class="section-list">
+                    <li class="section-item contacts-item">Voronezh, Russia</li>
+                    <li class="section-item contacts-item">Email: <a href="mailto:eskovdmt@gmail.com" title="email">eskovdmt@gmal.com</a></li>
+                    <li class="section-item contacts-item">Telegram: <a href="https://t.me/edmta">@edmta</a></li>
+                    <li class="section-item contacts-item">Discord: EskovDMTA#3364</li>
+                    <li class="section-item contacts-item">GitHub: <a href="https://github.com/EskovDMTA">eskovdmta</a></li>
+                </ul>
+        </section>
+
+        <section class="section" id='hard_skills'>
+            <h2 class="section-title">Hard skills</h2>
+                <div class="box">
+                    <h4>Html</h4>
+                    <div class="percent">
+                        <div style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>CSS</h4>
+                    <div class="percent">
+                        <div style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Python</h4>
+                    <div class="percent">
+                        <div style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Django</h4>
+                    <div class="percent">
+                        <div style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Photoshop</h4>
+                    <div class="percent">
+                        <div style="width: 70%;"></div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="section" id='code_example'>
+            <h2 class="section-title">Code example</h2>
+        <pre class="pre">
+<code>def profile(request, username):
+    user_req = get_object_or_404(User, username=username)
+    post_list = user_req.posts.get_queryset().order_by('id')
+    followers_author = user_req.following.all()
+    check_follower = []
+    follow = False
+    for aut in followers_author:
+        author = aut.user
+        check_follower.append(author)
+    if request.user in check_follower:
+        follow = True
+    paginator = Paginator(post_list, 10)
+    page_number = request.GET.get('page')
+    page = paginator.get_page(page_number)
+    follower = Follow.objects.filter(author=user_req).count()
+    following = Follow.objects.filter(user=user_req).count()
+    return render(request, 'posts/profile.html',
+                  {'user_req': user_req, 'page': page, 'paginator': paginator,
+                   'follower': follower, 'following': following, 'follow': follow})</code></pre>
+        </section>
+
+        <section class="section" id='education'>
+            <h2 class="section-title">Education</h2>
+                <ul class="section-list">
+                <li class="section-item"> 
+                    <h5>2017-2019</h5>
+                    <span>Master: Design of Buildings and Structures for Special Construction Conditions</span><br>
+                    <span>Voronezh State Technical University</span>
+                </li>
+                <li class="section-item">
+                    <h5>2013-2017</h5>
+                    <span>Bachelor: Industrial and Civil Construction</span><br>
+                    <span>Voronezh State Technical University</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section" id='experience'>
+            <h2 class="section-title">Experience</h2>
+            <ul class="section-list">
+                <li class="section-item"> 
+                    <h5>2018-2022</h5>
+                    <span>Design engineer</span><br> 
+                    <span>OOO "Russian construction company-Voronezh"</span>
+                </li>
+            </ul>
+        </section>
+      
+        <section class="section section-english" id='english'>
+            <h2 class="section-title">English</h2>
+                <p>В1(Intermediate)</p>
+
+        </section>
+
+    </div>
+    </main>
+    <footer class="footer">
+        <div class="container footer-container">
+            <div><a href="https://github.com/EskovDMTA" class="github nav-link">MyGitHub</a></div>
+                <div><p class="footer-conteiner footer-year">2022</p></div>
+            <a href="https://rs.school/js-stage0/" class="rss"></a>
+          </div>
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+</html>

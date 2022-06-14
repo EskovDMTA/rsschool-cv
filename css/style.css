@@ -195,7 +195,7 @@ body {
   width: 14px;
   height: 14px; 
   background-size: 10px 14px;
-  background-image: url("assets/svg/point.svg");
+  background-image: url("../assets/svg/point.svg");
   background-repeat: no-repeat;
 }
 
@@ -214,7 +214,7 @@ body {
   width: 14px;
   height: 14px; 
   background-size: 10px 14px;
-  background-image: url("assets/svg/point.svg");
+  background-image: url("../assets/svg/point.svg");
   background-repeat: no-repeat;
 }
 
@@ -244,26 +244,26 @@ body {
 }
 
 .contacts-item:nth-child(1):before {
-  background-image: url("assets/svg/geo.svg");
+  background-image: url("../assets/svg/geo.svg");
 }
 
 .contacts-item:nth-child(2):before {
   
-  background-image: url("assets/svg/mail.svg");
+  background-image: url("../assets/svg/mail.svg");
 }
 
 .contacts-item:nth-child(3):before {
   
-  background-image: url("assets/svg/telegram.svg");
+  background-image: url("../assets/svg/telegram.svg");
 }
 
 .contacts-item:nth-child(4):before {
   top: 3px;
-  background-image: url("assets/svg/dd.svg");
+  background-image: url("../assets/svg/dd.svg");
 }
 
 .contacts-item:nth-child(5):before {
-  background-image: url("assets/svg/github.svg");
+  background-image: url("../assets/svg/github.svg");
 }
 
 .footer {
@@ -285,13 +285,13 @@ body {
   text-decoration: none;
   background-repeat: no-repeat;
   padding-left: 25px;
-  background-image: url("assets/svg/github.svg");
+  background-image: url("../assets/svg/github.svg");
 }
 
 .rss {
   width: 121px;
   height: 45px;
-  background-image: url("assets/svg/rs_school_js.svg");
+  background-image: url("../assets/svg/rs_school_js.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
